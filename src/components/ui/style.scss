@@ -1,0 +1,70 @@
+$transitionTime: "1" ".5", "2" ".7", "3" "1", "4" "1.2", "5" "1.5";
+
+.basket {
+  backdrop-filter: blur(13px);
+  background-color: rgba(168, 168, 168, 0.31);
+  z-index: 1;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  color: white;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 2px 10px;
+}
+
+.hover-text:hover .tooltip-text {
+  visibility: visible;
+}
+
+#right {
+  top: 5px;
+  left: 49px;
+}
+
+.hover-text {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.lyrics {
+  transform: translateY(200vw);
+  transition: all 0.55s;
+  opacity: 0;
+  margin: 0 auto;
+  @media screen and (min-width: 991px) {
+    display: none;
+  }
+
+  &.transform {
+    transform: translateY(0);
+    opacity: 1;
+    margin: 0 auto;
+  }
+}
+
+.bg-menuBar {
+  background-image: url("../../assets/img/excerptsBg.png");
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
+  background-color: #1d1d20;
+  @media (max-width: 1024px) {
+    background-image: url("../../assets/img/excerptsBgTable.png");
+  }
+  @media (max-width: 768px) {
+      background-image: url("../../assets/img/excerptsBgMobile.png");
+  }
+}
+
+.bg-menuBar-blur {
+  backdrop-filter: blur(23.5px);
+  background: rgba(27, 27, 27, 0.55);
+  min-height: 100vh;
+}
+
